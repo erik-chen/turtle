@@ -1,0 +1,80 @@
+import turtle
+import math
+
+
+turtle.hideturtle()
+turtle.right(15)
+turtle.penup()
+turtle.backward(350)
+turtle.pendown()
+turtle.right(-15)
+turtle.bgcolor('LemonChiffon3')
+turtle.color('dim grey')
+turtle.pensize(1.3)
+turtle.hideturtle()
+turtle.speed(0)
+turtle.delay(0)
+
+
+def qiguai(a):
+    if a >5:
+        turtle.fd(a*2/3)
+        turtle.fd(a/3)
+        turtle.up()
+        turtle.bk(a*2/3)
+        turtle.down()
+        turtle.left(60)
+        turtle.fd(a/3)
+        turtle.right(120)
+        turtle.fd(a / 3)
+        turtle.right(120)
+        turtle.color('LemonChiffon3')
+
+        turtle.fd(a / 3)
+        turtle.color('dim grey')
+        turtle.up()
+        turtle.fd(a / 3)
+        turtle.down()
+        turtle.right(180)
+        qiguai(a/3)
+        turtle.penup()
+        turtle.fd(a/3)
+        turtle.left(60)
+        turtle.down()
+        qiguai(a/3)
+        turtle.penup()
+        turtle.fd(a / 3)
+        turtle.right(120)
+        turtle.down()
+        qiguai(a / 3)
+        turtle.penup()
+        turtle.fd(a / 3)
+        turtle.left(60)
+        turtle.down()
+        qiguai(a / 3)
+        turtle.penup()
+        turtle.right(180)
+        turtle.fd(2/3*a)
+        turtle.right(180)
+        turtle.down()
+
+
+
+def daqiguai(a):
+    turtle.tracer(0)
+    qiguai(a)
+    turtle.up()
+    turtle.fd(a)
+    turtle.down()
+    turtle.right(120)
+    qiguai(a)
+    turtle.up()
+    turtle.fd(a)
+    turtle.down()
+    turtle.right(120)
+    qiguai(a)
+    turtle.update()
+    turtle.mainloop()
+
+
+daqiguai(600)
